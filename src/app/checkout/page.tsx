@@ -46,7 +46,7 @@ export default function CheckoutPage() {
           <div className="flex items-center justify-between">
             <Link
               href="/shop"
-              className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
+              className="flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground transition-colors"
             >
               <ChevronLeft className="h-4 w-4" />
               Continue Shopping
@@ -70,18 +70,16 @@ export default function CheckoutPage() {
             <div className="flex items-center gap-4 mb-10">
               <button
                 onClick={() => setStep("shipping")}
-                className={`text-sm tracking-[0.15em] uppercase transition-colors ${
-                  step === "shipping" ? "text-foreground" : "text-muted-foreground"
-                }`}
+                className={`text-sm tracking-[0.15em] uppercase transition-colors ${step === "shipping" ? "text-foreground" : "text-muted-foreground"
+                  }`}
               >
                 Shipping
               </button>
               <div className="h-px w-8 bg-border" />
               <button
                 onClick={() => setStep("payment")}
-                className={`text-sm tracking-[0.15em] uppercase transition-colors ${
-                  step === "payment" ? "text-foreground" : "text-muted-foreground"
-                }`}
+                className={`text-sm tracking-[0.15em] uppercase transition-colors ${step === "payment" ? "text-foreground" : "text-muted-foreground"
+                  }`}
               >
                 Payment
               </button>
@@ -97,7 +95,7 @@ export default function CheckoutPage() {
 
                 {/* Contact */}
                 <div className="mb-8">
-                  <h3 className="text-sm tracking-[0.1em] uppercase text-muted-foreground mb-4">Contact</h3>
+                  <h3 className="text-sm tracking-widest uppercase text-muted-foreground mb-4">Contact</h3>
                   <div className="space-y-4">
                     <div>
                       <Label htmlFor="email" className="text-xs tracking-wide">
@@ -126,7 +124,7 @@ export default function CheckoutPage() {
 
                 {/* Address */}
                 <div className="mb-8">
-                  <h3 className="text-sm tracking-[0.1em] uppercase text-muted-foreground mb-4">Shipping Address</h3>
+                  <h3 className="text-sm tracking-widest uppercase text-muted-foreground mb-4">Shipping Address</h3>
                   <div className="space-y-4">
                     <div className="grid grid-cols-2 gap-4">
                       <div>
@@ -239,7 +237,7 @@ export default function CheckoutPage() {
                 </div>
 
                 <Button className="w-full py-6 text-sm tracking-[0.2em] uppercase">
-                  Place Order — ${total.toLocaleString()}
+                  Place Order — ${total.toLocaleString('en-US')}
                 </Button>
 
                 <button
@@ -266,7 +264,7 @@ export default function CheckoutPage() {
                     transition={{ duration: 0.4, delay: index * 0.1 }}
                     className="flex gap-4"
                   >
-                    <div className="w-20 h-24 bg-muted flex-shrink-0 relative">
+                    <div className="w-20 h-24 bg-muted shrink-0 relative">
                       <Image
                         src={item.image || "/placeholder.svg"}
                         alt={item.name}
@@ -283,7 +281,7 @@ export default function CheckoutPage() {
                       </p>
                       <p className="text-xs text-muted-foreground">Qty: {item.quantity}</p>
                     </div>
-                    <div className="text-sm">${item.price.toLocaleString()}</div>
+                    <div className="text-sm">${item.price.toLocaleString('en-US')}</div>
                   </motion.div>
                 ))}
               </div>
@@ -291,7 +289,7 @@ export default function CheckoutPage() {
               <div className="border-t border-border pt-6 space-y-3">
                 <div className="flex justify-between text-sm">
                   <span className="text-muted-foreground">Subtotal</span>
-                  <span>${subtotal.toLocaleString()}</span>
+                  <span>${subtotal.toLocaleString('en-US')}</span>
                 </div>
                 <div className="flex justify-between text-sm">
                   <span className="text-muted-foreground">Shipping</span>
@@ -299,11 +297,11 @@ export default function CheckoutPage() {
                 </div>
                 <div className="flex justify-between text-sm">
                   <span className="text-muted-foreground">Estimated Tax</span>
-                  <span>${tax.toLocaleString()}</span>
+                  <span>${tax.toLocaleString('en-US')}</span>
                 </div>
                 <div className="flex justify-between text-base font-medium pt-3 border-t border-border">
                   <span>Total</span>
-                  <span>${total.toLocaleString()}</span>
+                  <span>${total.toLocaleString('en-US')}</span>
                 </div>
               </div>
 

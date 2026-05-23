@@ -171,7 +171,7 @@ export default function OrdersPage() {
                           </span>
                         </div>
                         <div className="flex items-center gap-4">
-                          <span className="text-sm hidden sm:block">${order.total.toLocaleString()}</span>
+                          <span className="text-sm hidden sm:block">${order.total.toLocaleString('en-US')}</span>
                           <ChevronDown
                             className={`h-4 w-4 transition-transform duration-300 ${
                               expandedOrder === order.id ? "rotate-180" : ""
@@ -194,7 +194,7 @@ export default function OrdersPage() {
                               <div className="space-y-4 pt-6">
                                 {order.items.map((item) => (
                                   <Link key={item.id} href={`/product/${item.id}`} className="flex gap-4 group">
-                                    <div className="w-16 h-20 bg-muted flex-shrink-0 relative overflow-hidden">
+                                    <div className="w-16 h-20 bg-muted shrink-0 relative overflow-hidden">
                                       <Image
                                         src={item.image || "/placeholder.svg"}
                                         alt={item.name}
@@ -210,7 +210,7 @@ export default function OrdersPage() {
                                         {item.color} / {item.size}
                                       </p>
                                     </div>
-                                    <div className="text-sm">${item.price.toLocaleString()}</div>
+                                    <div className="text-sm">${item.price.toLocaleString('en-US')}</div>
                                   </Link>
                                 ))}
                               </div>
@@ -218,7 +218,7 @@ export default function OrdersPage() {
                               <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mt-6 pt-6 border-t border-border">
                                 <div className="text-sm">
                                   <span className="text-muted-foreground">Order Total: </span>
-                                  <span className="font-medium">${order.total.toLocaleString()}</span>
+                                  <span className="font-medium">${order.total.toLocaleString('en-US')}</span>
                                 </div>
                                 <div className="flex gap-4">
                                   <button className="text-sm underline underline-offset-4 hover:no-underline transition-all">

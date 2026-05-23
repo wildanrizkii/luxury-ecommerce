@@ -19,7 +19,7 @@ export default function ShopPage() {
       <Navigation />
 
       {/* Hero Banner - already using priority, added sizes */}
-      <section className="relative h-[50vh] min-h-[400px] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[50vh] min-h-100 flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <Image
             src="/shop-hero-luxury-fashion-collection.jpg"
@@ -90,7 +90,7 @@ export default function ShopPage() {
                   }}
                 >
                   <Link href={`/product/${product.id}`} className="group block">
-                    <div className="relative aspect-[3/4] overflow-hidden bg-muted mb-4">
+                    <div className="relative aspect-3/4 overflow-hidden bg-muted mb-4">
                       <Image
                         src={product.image || "/placeholder.svg"}
                         alt={product.name}
@@ -113,7 +113,7 @@ export default function ShopPage() {
                       <h3 className="font-serif text-lg group-hover:underline underline-offset-4 transition-all">
                         {product.name}
                       </h3>
-                      <p className="text-sm text-muted-foreground">€{product.price.toLocaleString()}</p>
+                      <p className="text-sm text-muted-foreground">€{product?.price?.toLocaleString('en-US')}</p>
                     </div>
                   </Link>
                 </motion.div>

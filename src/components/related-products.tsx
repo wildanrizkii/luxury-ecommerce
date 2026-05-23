@@ -25,7 +25,7 @@ export function RelatedProducts({ products }: RelatedProductsProps) {
               transition={{ duration: 0.6, delay: index * 0.1 }}
             >
               <Link href={`/product/${product.id}`} className="group block">
-                <div className="relative aspect-[3/4] overflow-hidden bg-muted mb-4">
+                <div className="relative aspect-3/4 overflow-hidden bg-muted mb-4">
                   <Image
                     src={product.image || "/placeholder.svg"}
                     alt={product.name}
@@ -39,7 +39,7 @@ export function RelatedProducts({ products }: RelatedProductsProps) {
                   <h3 className="font-serif text-sm md:text-base group-hover:underline underline-offset-4">
                     {product.name}
                   </h3>
-                  <p className="text-xs md:text-sm text-muted-foreground">€{product.price.toLocaleString()}</p>
+                  <p className="text-xs md:text-sm text-muted-foreground">€{product?.price?.toLocaleString('en-US')}</p>
                 </div>
               </Link>
             </motion.div>

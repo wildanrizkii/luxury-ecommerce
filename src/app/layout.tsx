@@ -46,7 +46,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
+    <html lang="en" className={`${inter.variable} ${playfair.variable}`} suppressHydrationWarning>
       <body className={`font-sans antialiased`} suppressHydrationWarning>
         <Preloader />
         <SmoothScrollProvider>{children}</SmoothScrollProvider>

@@ -66,7 +66,7 @@ export function Navigation() {
     { href: "/heritage", label: "Heritage" },
   ]
 
-  const useDarkText = isScrolled || pathname.startsWith("/account")
+  const useDarkText = isScrolled || pathname.startsWith("/account") || pathname.startsWith("/product/")
 
   const navItemColor = useDarkText ? "text-foreground" : "text-white"
   const navItemHoverColor = useDarkText ? "text-foreground/60 hover:text-foreground" : "text-white/70 hover:text-white"
@@ -166,7 +166,7 @@ export function Navigation() {
               <button
                 onClick={() => setIsCartOpen(true)}
                 aria-label="Shopping cart"
-                className={`p-2 -mr-2 relative transition-colors duration-500 ${iconColor}`}
+                className={`p-2 -mr-2 relative transition-colors duration-500 cursor-pointer ${iconColor}`}
               >
                 <ShoppingBag className="h-5 w-5 stroke-[1.5]" />
                 <span
@@ -200,7 +200,7 @@ export function Navigation() {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: "-100%" }}
               transition={{ duration: 0.3, ease: "easeOut" }}
-              className="fixed inset-y-0 left-0 w-[280px] z-50 bg-background border-r border-border lg:hidden"
+              className="fixed inset-y-0 left-0 w-70 z-50 bg-background border-r border-border lg:hidden"
             >
               <div className="flex items-center justify-between h-16 px-6 border-b border-border">
                 <span className="font-serif text-lg tracking-[0.2em] uppercase">Menu</span>

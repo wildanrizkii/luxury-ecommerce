@@ -101,7 +101,7 @@ export default function ProductPage({ params }: { params: Promise<{ id: string }
             <div className="space-y-4">
               <p className="text-xs tracking-widest text-muted-foreground uppercase">{product.category}</p>
               <h1 className="font-serif text-3xl md:text-4xl">{product.name}</h1>
-              <p className="text-xl">€{product.price.toLocaleString()}</p>
+              <p className="text-xl">€{product?.price?.toLocaleString('en-US')}</p>
             </div>
 
             {/* Description */}

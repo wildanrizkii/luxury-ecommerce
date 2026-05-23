@@ -78,7 +78,7 @@ export function MiniCart({ isOpen, onClose }: MiniCartProps) {
                     transition={{ duration: 0.3, delay: index * 0.1 }}
                     className="flex gap-4"
                   >
-                    <div className="w-24 h-30 bg-muted flex-shrink-0 relative">
+                    <div className="w-24 h-30 bg-muted shrink-0 relative">
                       <Image
                         src={item.image || "/placeholder.svg"}
                         alt={item.name}
@@ -101,7 +101,7 @@ export function MiniCart({ isOpen, onClose }: MiniCartProps) {
                         </button>
                       </div>
                     </div>
-                    <div className="text-sm">${item.price.toLocaleString()}</div>
+                    <div className="text-sm">${item.price.toLocaleString('en-US')}</div>
                   </motion.div>
                 ))}
               </div>
@@ -111,7 +111,7 @@ export function MiniCart({ isOpen, onClose }: MiniCartProps) {
             <div className="border-t border-border p-6 space-y-4">
               <div className="flex justify-between text-sm">
                 <span className="text-muted-foreground">Subtotal</span>
-                <span>${subtotal.toLocaleString()}</span>
+                <span>${subtotal.toLocaleString('en-US')}</span>
               </div>
               <p className="text-xs text-muted-foreground">Shipping and taxes calculated at checkout</p>
               <Link href="/checkout" onClick={onClose}>
