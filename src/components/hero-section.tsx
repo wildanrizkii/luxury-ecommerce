@@ -76,7 +76,7 @@ export function HeroSection() {
           <motion.div
             animate={{ y: [0, 8, 0] }}
             transition={{ duration: 1.5, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
-            className="w-[1px] h-12 bg-background/50"
+            className="w-px h-12 bg-background/50"
           />
         </motion.div>
       </div>

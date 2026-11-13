@@ -57,7 +57,7 @@ export function ColorSelector({ colors, onSelect }: ColorSelectorProps) {
             )}
             {!available && (
               <span className="absolute inset-0 flex items-center justify-center">
-                <span className="w-full h-[1px] bg-foreground rotate-45 absolute" />
+                <span className="w-full h-px bg-foreground rotate-45 absolute" />
               </span>
             )}
           </button>

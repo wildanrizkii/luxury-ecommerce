@@ -41,7 +41,7 @@ export function Preloader() {
           initial={{ opacity: 1 }}
           exit={{ opacity: 0, filter: "blur(10px)" }}
           transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-          className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-background"
+          className="fixed inset-0 z-100 flex flex-col items-center justify-center bg-background"
         >
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -52,7 +52,7 @@ export function Preloader() {
             <h1 className="font-serif text-3xl md:text-4xl tracking-[0.3em] uppercase text-foreground mb-6">
               Maison
             </h1>
-            <div className="h-[1px] bg-foreground/20 w-32 relative overflow-hidden">
+            <div className="h-px bg-foreground/20 w-32 relative overflow-hidden">
               <motion.div
                 initial={{ x: "-100%" }}
                 animate={{ x: "100%" }}

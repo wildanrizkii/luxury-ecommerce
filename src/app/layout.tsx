@@ -2,7 +2,6 @@ import type React from "react"
 import type { Metadata } from "next"
 import { Geist, Geist_Mono, Inter, Playfair_Display } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
-import { SpeedInsights } from "@vercel/speed-insights/next"
 import "./globals.css"
 import { SmoothScrollProvider } from "@/components/smooth-scroll-provider"
 import { Preloader } from "@/components/preloader"
@@ -52,7 +51,6 @@ export default function RootLayout({
         <Preloader />
         <SmoothScrollProvider>{children}</SmoothScrollProvider>
         <Analytics />
-        <SpeedInsights />
       </body>
     </html>
   )

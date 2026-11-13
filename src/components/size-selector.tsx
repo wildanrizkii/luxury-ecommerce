@@ -35,7 +35,7 @@ export function SizeSelector({ sizes, onSelect }: SizeSelectorProps) {
             key={size}
             onClick={() => handleSelect(size, available)}
             disabled={!available}
-            className={`min-w-[3rem] px-4 py-3 text-sm border transition-all duration-300 ${
+            className={`min-w-12 px-4 py-3 text-sm border transition-all duration-300 ${
               selected === size
                 ? "border-foreground bg-foreground text-background"
                 : available
