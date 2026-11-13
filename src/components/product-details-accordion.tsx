@@ -44,7 +44,7 @@ export function ProductDetailsAccordion({ items }: ProductDetailsAccordionProps)
                 <ul className="pt-4 space-y-2">
                   {item.content.map((line, i) => (
                     <li key={i} className="text-sm text-muted-foreground flex items-start gap-2">
-                      <span className="w-1 h-1 rounded-full bg-muted-foreground mt-2 flex-shrink-0" />
+                      <span className="w-1 h-1 rounded-full bg-muted-foreground mt-2 shrink-0" />
                       {line}
                     </li>
                   ))}

@@ -1,42 +1,14 @@
 "use client"
 
-import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Switch } from "@/components/ui/switch"
 import { Label } from "@/components/ui/label"
-import { Navigation } from "@/components/navigation"
-import { PremiumFooter } from "@/components/premium-footer"
-import { AccountSidebar } from "@/components/account-sidebar"
 
 export default function SettingsPage() {
   return (
-    <>
-      <Navigation />
-      <main className="min-h-screen bg-background pt-24 lg:pt-32">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8 pb-20">
-          {/* Page header */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="mb-12"
-          >
-            <h1 className="font-serif text-3xl lg:text-4xl mb-2">My Account</h1>
-            <p className="text-muted-foreground">Manage your preferences and settings</p>
-          </motion.div>
-
-          <div className="flex flex-col lg:flex-row gap-12">
-            <AccountSidebar />
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              className="flex-1"
-            >
-              <div className="max-w-2xl">
-                {/* Email Preferences */}
-                <section className="mb-12">
+    <div className="max-w-2xl">
+      {/* Email Preferences */}
+      <section className="mb-12">
                   <h2 className="font-serif text-2xl mb-6">Email Preferences</h2>
                   <div className="space-y-6">
                     <div className="flex items-center justify-between py-4 border-b border-border">
@@ -108,7 +80,7 @@ export default function SettingsPage() {
                         <Label className="text-sm font-medium">Download Your Data</Label>
                         <p className="text-xs text-muted-foreground mt-1">Request a copy of all your personal data</p>
                       </div>
-                      <Button variant="outline" className="text-sm tracking-[0.1em] uppercase bg-transparent">
+                      <Button variant="outline" className="text-sm tracking-widest uppercase bg-transparent">
                         Request Data
                       </Button>
                     </div>
@@ -121,7 +93,7 @@ export default function SettingsPage() {
                       </div>
                       <Button
                         variant="outline"
-                        className="text-sm tracking-[0.1em] uppercase text-red-600 border-red-600/30 hover:bg-red-600/10 hover:text-red-600 bg-transparent"
+                        className="text-sm tracking-widest uppercase text-red-600 border-red-600/30 hover:bg-red-600/10 hover:text-red-600 bg-transparent"
                       >
                         Delete Account
                       </Button>
@@ -129,11 +101,5 @@ export default function SettingsPage() {
                   </div>
                 </section>
               </div>
-            </motion.div>
-          </div>
-        </div>
-      </main>
-      <PremiumFooter />
-    </>
   )
 }

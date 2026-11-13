@@ -46,7 +46,7 @@ export function ProductCard({
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
-        <div className="relative aspect-[3/4] overflow-hidden bg-muted mb-4">
+        <div className="relative aspect-3/4 overflow-hidden bg-muted mb-4">
           {/* Primary image */}
           <Image
             src={image || "/placeholder.svg"}

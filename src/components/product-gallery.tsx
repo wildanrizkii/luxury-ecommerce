@@ -20,7 +20,7 @@ export function ProductGallery({ images, productName }: ProductGalleryProps) {
           <button
             key={index}
             onClick={() => setActiveIndex(index)}
-            className={`relative w-20 h-24 md:w-20 md:h-28 flex-shrink-0 overflow-hidden transition-all duration-300 ${
+            className={`relative w-20 h-24 md:w-20 md:h-28 shrink-0 overflow-hidden transition-all duration-300 ${
               activeIndex === index ? "ring-1 ring-foreground" : "opacity-60 hover:opacity-100"
             }`}
           >
@@ -37,7 +37,7 @@ export function ProductGallery({ images, productName }: ProductGalleryProps) {
       </div>
 
       {/* Main Image - priority for first image, responsive sizes */}
-      <div className="relative flex-1 aspect-[3/4] bg-muted overflow-hidden">
+      <div className="relative flex-1 aspect-3/4 bg-muted overflow-hidden">
         <AnimatePresence mode="wait">
           <motion.div
             key={activeIndex}

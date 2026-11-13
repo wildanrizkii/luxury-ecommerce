@@ -219,7 +219,7 @@ export default function HeritagePage() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="group"
               >
-                <div className="aspect-[5/6] overflow-hidden mb-6 relative">
+                <div className="aspect-5/6 overflow-hidden mb-6 relative">
                   <Image
                     src={value.image || "/placeholder.svg"}
                     alt={value.title}
@@ -260,7 +260,7 @@ export default function HeritagePage() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="text-center"
               >
-                <div className="aspect-[4/5] overflow-hidden mb-6 grayscale hover:grayscale-0 transition-all duration-700 relative">
+                <div className="aspect-4/5 overflow-hidden mb-6 grayscale hover:grayscale-0 transition-all duration-700 relative">
                   <Image
                     src={person.image || "/placeholder.svg"}
                     alt={person.name}
